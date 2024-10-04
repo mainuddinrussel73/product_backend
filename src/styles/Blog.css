@@ -1,0 +1,131 @@
+.blog-page-container {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;  
+    padding: 2rem;
+    text-align: center;
+    background-color: #F6ECEB;
+    border-radius: 20px;
+  }
+  /* Blog Section Styles */
+.blog-section {
+  padding: 0px 0px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.blog-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content-b {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-title-b {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-description-b {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-footer-b {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.blog-button {
+  background-color: #EDE2E1;
+  color: #7D4F4A;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-page-container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 140px;  
+  }
+  .blog-grid{
+    display: inline-block;
+    gap: 10px;
+  }
+  .blog-card {
+    background-color: white;
+    margin-top: 10px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+
+  .blog-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-description {
+    font-size: 0.9rem;
+  }
+
+  .blog-button {
+    font-size: 0.875rem;
+  }
+}

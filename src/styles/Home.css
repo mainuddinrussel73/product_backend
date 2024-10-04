@@ -1,0 +1,80 @@
+.book-section-div{
+
+}
+/* Main Container for Items Per Page */
+.items-per-page {
+    margin: 0px 0; /* Space above and below the section */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Center items horizontally */
+    gap: 10px; /* Space between label and select */
+    margin-right: 30px;
+  }
+  
+  /* Label for Items Per Page Selector */
+  .items-per-page label {
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: bold; /* Make label bold */
+    color: #7D4F4A; /* Dark gray color for text */
+  }
+  
+  /* Select Dropdown for Items Per Page */
+  .items-per-page select {
+    padding: 8px 12px; /* Padding for better touch targets */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Match font size with label */
+    background-color: #faf8f8; /* White background */
+    transition: border-color 0.3s; /* Smooth border color change */
+  }
+  
+  /* Hover effect for the select dropdown */
+  .items-per-page select:hover {
+    border-color: #7D4F4A; /* Blue border on hover */
+  }
+  
+  /* Focus effect for the select dropdown */
+  .items-per-page select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #7D4F4A; /* Blue border when focused */
+    box-shadow: 0 0 2px  #7D4F4A; /* Shadow for focus effect */
+  }
+  
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #f7f5f4;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:hover {
+    background-color: #d29b94 ;
+    color: #F6ECEB;
+  }
+  
+  .pagination .active {
+    background-color: #7D4F4A;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    /* Main Container for Items Per Page */
+.items-per-page {
+    margin: 0px 0; /* Space above and below the section */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between label and select */
+  }
+  
+}

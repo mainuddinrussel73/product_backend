@@ -1,0 +1,33 @@
+.about-page-container {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;    
+  padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+  }
+  
+.about-page-container h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .about-page-container p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .about-page-container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 130px;    
+   
+    }
+}

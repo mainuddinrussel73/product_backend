@@ -1,0 +1,48 @@
+.not-found {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; 
+  }
+  
+  .not-found h1 {
+    font-size: 100px;
+    margin: 0;
+    color: #ff4500; /* Customize as needed */
+  }
+  
+  .not-found h2 {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+  
+  .not-found p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff4500;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #e63e00;
+  }
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .not-found  {
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 130px;    
+     
+      }
+  }

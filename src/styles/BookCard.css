@@ -1,0 +1,148 @@
+/* Container for the book cards grid */
+.book-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards on desktop */
+  gap: 10px; /* Space between cards */
+  padding: 10px;
+}
+
+.book-section{
+  
+
+}
+.book-section-title{
+  text-align: center;
+  font-size: 40px;
+}
+/* Individual book card */
+.book-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+/* Left side image section */
+.left-card {
+  width: 40%; /* Allocate 40% of space to the image */
+  position: relative;
+}
+
+.left-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure image covers full area without distortion */
+}
+
+/* Tags styling */
+.tags-container {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+.book-card:hover .left-card .tag {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.tag {
+  display: none;  
+  background-color: #F6ECEB; /* Primary color for tag */
+  color: #7D4F4A;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: bold;
+}
+.right-card{
+  width: 50%;
+}
+
+/* Card hover effect */
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling */
+.book-card img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Content inside the card */
+.card-content {
+  padding-left: 10px;
+}
+
+
+
+/* Book title */
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0;
+  color: #7D4F4A;
+}
+
+/* Author and other details */
+.book-author,
+.book-rating {
+  font-size: 10px;
+  font-weight: bold;
+  color: #555; /* Dark gray for less emphasis */
+}
+.book-category{
+  font-size: 10px;
+  color: #555; 
+}
+.book-author p,
+.book-category p,
+.book-rating p{
+  line-height: 1px;
+  padding: 0px;
+}
+/* Button styling */
+.details-button {
+  background-color: #F6ECEB;
+  color: #7D4F4A;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.details-button:hover {
+  background-color: #7D4F4A;
+  color: #F6ECEB;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .book-card-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards on mobile */
+    padding: 1rem; /* Less padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card-grid {
+    grid-template-columns: 1fr; /* 1 card on very small devices */
+  }
+}

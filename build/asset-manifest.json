@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/simple-book-shop/static/css/main.b7828ef4.css",
+    "main.js": "/simple-book-shop/static/js/main.1e9181d8.js",
+    "static/js/453.920fa5a9.chunk.js": "/simple-book-shop/static/js/453.920fa5a9.chunk.js",
+    "static/media/banner1.jpeg": "/simple-book-shop/static/media/banner1.ec30d537638b01ee693f.jpeg",
+    "static/media/banner3.jpg": "/simple-book-shop/static/media/banner3.f0115a4ac3ffcbd71001.jpg",
+    "static/media/banner2.jpg": "/simple-book-shop/static/media/banner2.aec94c755e3feb926cf7.jpg",
+    "static/media/image1.png": "/simple-book-shop/static/media/image1.eec099d63e2e3c395f1e.png",
+    "static/media/image3.png": "/simple-book-shop/static/media/image3.c9819e0d53a1557d7da3.png",
+    "static/media/image2.png": "/simple-book-shop/static/media/image2.b649e52c95f9ea94f8cb.png",
+    "static/media/logo.png": "/simple-book-shop/static/media/logo.cc17cf8dcf72004fb4aa.png",
+    "static/media/slick.svg": "/simple-book-shop/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/simple-book-shop/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/simple-book-shop/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/simple-book-shop/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/simple-book-shop/index.html",
+    "main.b7828ef4.css.map": "/simple-book-shop/static/css/main.b7828ef4.css.map",
+    "main.1e9181d8.js.map": "/simple-book-shop/static/js/main.1e9181d8.js.map",
+    "453.920fa5a9.chunk.js.map": "/simple-book-shop/static/js/453.920fa5a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7828ef4.css",
+    "static/js/main.1e9181d8.js"
+  ]
+}

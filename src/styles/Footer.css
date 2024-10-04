@@ -1,0 +1,191 @@
+/* Basic footer styling */
+.footer {
+  background-color: #F1F0EF; /* Dark background for the footer */
+  color: #7D4F4A; /* White text color */
+  padding: 40px 20px; /* Padding around the footer */
+  position: relative; /* Ensure positioning context */
+}
+
+.container {
+  max-width: 1200px; /* Maximum width for the footer content */
+  margin: 0 auto; /* Center the footer content */
+}
+
+.footer-content {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between; /* Space out the children */
+}
+
+/* Footer section styles */
+.footer-section {
+  flex: 1; /* Allow to grow */
+  min-width: 250px; /* Minimum width for responsiveness */
+  margin: 20px; /* Space between sections */
+}
+
+/* Heading styles */
+.footer-section h2, .footer-section h3 {
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Bold text for headings */
+}
+
+/* About section styles */
+.about p {
+  margin-bottom: 15px; /* Space below paragraph */
+}
+
+/* Social links styling */
+.socials {
+  display: flex; /* Use Flexbox for social icons */
+  gap: 15px; /* Space between social icons */
+}
+
+.socials a {
+  color: #7D4F4A; /* White color for social icons */
+  font-size: 20px; /* Font size for icons */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.socials a:hover {
+  color: #f39c12; /* Change color on hover */
+}
+
+/* Links section styling */
+.links ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.links ul li {
+  margin: 10px; /* Space between links */
+}
+
+.links ul li .nav-item {
+  color: #7D4F4A; 
+  text-decoration: none; 
+  border: none;
+  transition: color 0.3s; 
+}
+
+.links ul li .nav-item:hover {
+  color: #7D4F4A; /* Change color on hover */
+  background-color: #F4E8E7;
+}
+
+/* Contact section styles */
+.contact p {
+  margin: 5px 0; /* Space between contact details */
+}
+
+/* Subscribe section styles */
+.subscribe-form {
+  display: flex; /* Use Flexbox for form layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px; /* Padding for input field */
+  margin-bottom: 10px; /* Space below input field */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.subscribe-form button {
+  background-color: #EDE2E1; /* Button color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  color: #7D4F4A; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.subscribe-form button:hover {
+  background-color: #F4E8E7; /* Darker button color on hover */
+}
+
+/* Bottom footer section */
+.footer-bottom {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space above bottom section */
+  font-size: 14px; /* Font size for copyright text */
+}
+
+/* Responsive styles for tablets and mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .footer-section {
+    margin: 15px 0; /* Space between sections */
+  }
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .links ul li {
+    margin: 10px; /* Space between links */
+  }
+  .socials{
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscribe-form {
+    width: 100%; /* Full width for mobile inputs */
+  }
+
+  .subscribe-form input[type="email"] {
+    width: calc(100% - 22px); /* Full width minus padding */
+  }
+
+  .footer-bottom {
+    margin-top: 30px; /* More space above bottom section */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .footer-section h2 {
+    font-size: 24px; /* Adjust heading size */
+  }
+
+  .footer-section h3 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .footer-section p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .links ul li {
+    margin: 10px; /* Space between links */
+  }
+  .socials{
+    display: flex;
+    justify-content: center;
+  }
+  .socials a {
+    font-size: 18px; /* Adjust icon size */
+  }
+}

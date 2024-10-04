@@ -1,0 +1,118 @@
+
+.login-container {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 2%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+ 
+  
+  .login-box {
+    background-color: #f9f7f6;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: fit-content;
+    text-align: center;
+    height: auto;
+   
+  }
+  .login-logo-title{
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .login-form .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .login-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-form input {
+    width: -webkit-fill-available;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .login-form input:focus {
+    border-color: #F6ECEB;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F6ECEB;
+    border: none;
+    color: #7D4F4A;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #7D4F4A;
+    color: #F6ECEB;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+  
+  .forgot-password,
+  .signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .forgot-password a,
+  .signup-link a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .forgot-password a:hover,
+  .signup-link a:hover {
+    color: #2980b9;
+  }
+
+  
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .login-container {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 2%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}

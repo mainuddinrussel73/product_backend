@@ -1,0 +1,455 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FEFDFD;
+  color: #7D4F4A;
+  margin-top: 20px;
+  margin-left:15px;
+  margin-right: 15px;
+  border-radius: 20px;
+  z-index: 1000;
+}
+/* Navbar logo and title container */
+.navbar-logo-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.navbar-logo {
+  height: 60px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+/* Website title styles */
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+}
+
+/* Center the nav links */
+.nav-div{
+  display: flex;
+  list-style: none;
+  line-height: 1px;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  line-height: 1px;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
+ 
+}
+.nav-links-l{
+  display: flex;
+  list-style: none;
+  line-height: 1px;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  flex-grow: 1;
+  justify-content: flex-end;
+ 
+}
+.nav-links-l a {
+  text-decoration: none; /* Remove underline */
+  color: #7D4F4A; /* Button text color */
+  background-color: #FEFDFD; /* Button background color */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid transparent; /* Border for hover effect */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  font-size: 20px;
+  
+}
+
+
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: #7D4F4A; /* Button text color */
+  background-color: #FEFDFD; /* Button background color */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid transparent; /* Border for hover effect */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  font-size: 20px;
+  
+}
+
+
+.nav-item{
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; 
+  align-items: center; 
+}
+.nav-item:hover{
+  background-color: #F1F0EF; /* Darker background on hover */
+  border: 1px solid white; /* Show border on hover */
+}
+.nav-item div{
+  line-height: 1px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Button styles */
+
+
+.nav-button1{
+  margin-left: 1rem;
+  padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nav-button2 {
+  display: none; /* Space between buttons */
+}
+.nav-button3 {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #F6ECEB;
+  color: #7D4F4A;
+  font-size: 17px;
+  font-weight: bold;
+  
+}
+.nav-button3 a  {
+  border: none;
+  border-radius: 20px;
+  background-color: #F6ECEB;
+  color: #7D4F4A;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+
+  
+  /* Center the nav links */
+  .nav-div{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 18px
+  }
+  .nav-links-l {
+    display: flex;
+    list-style: none;
+   
+  }
+  .nav-item{
+    flex-direction: column;
+    width: fit-content;
+  }
+  .nav-item div{
+    margin-left: 10px;
+  line-height: 1px;
+  }
+  .nav-links li {
+    margin: 0 5px;
+  }
+  .nav-links-l li {
+    margin: 0px;
+  }
+
+  
+  .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #7D4F4A; /* Button text color */
+    background-color: #FEFDFD; /* Button background color */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid transparent; /* Border for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    font-size: 20px;
+    
+  }
+  
+  .nav-links a:hover {
+    background-color: #F1F0EF; /* Darker background on hover */
+    border: 1px solid white; /* Show border on hover */
+  }
+  
+  /* Button styles */
+  .nav-buttons{
+    display: flex;
+  }
+  
+  .nav-button1{
+    margin-left: 1rem;
+    padding: 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #F6ECEB;
+      color: #7D4F4A;
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 5px;
+          margin-top: 5px;
+  }
+  
+  .nav-button2 {
+    display: none; /* Space between buttons */
+  }
+  .nav-button3 {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    
+  }
+  .nav-button3 a  {
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  }
+  
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 40px; /* Adjust size for mobile */
+  }
+
+  .navbar-title {
+    font-size: 20px; /* Adjust title size for mobile */
+  }
+  .nav-div{
+    display: inline; /* Hide links initially */
+   
+    z-index: 1000; /* Ensure menu is on top */
+  }
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 105px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #FEFDFD;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    opacity: 0.978;
+    z-index: 1000; /* Ensure menu is on top */
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 1s ease;
+  }
+  .nav-links-l {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 105px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #FEFDFD;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    opacity: 0.978;
+    z-index: 1000; /* Ensure menu is on top */
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 1s ease;
+   
+  }
+  .nav-links li {
+    margin: 2px 10px;
+  }
+  .nav-links-l li {
+    margin: 2px 10px;
+  }
+  .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #7D4F4A; /* Button text color */
+    padding: 1px 1px; /* Padding inside the button */
+    background-color: #FEFDFD; /* Button background color */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid transparent; /* Border for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .nav-item{
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .nav-item div{
+    line-height: 1px;
+    text-decoration: none;
+  }
+  .nav-links.active {
+    display: flex; /* Show links when active */
+    align-items: flex-start;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    
+  }
+  .nav-links-l.active {
+    display: flex; /* Show links when active */
+    align-items: flex-start;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger icon */
+    flex-direction: row-reverse;
+  }
+
+  .nav-buttons{
+    display: block;
+  }
+  .nav-button1{
+    display: none;
+  }
+
+  .nav-button2 {
+    display: block;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .nav-button3 {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    
+  }
+  .nav-button3 a  {
+    border: none;
+    border-radius: 20px;
+    background-color: #F6ECEB;
+    color: #7D4F4A;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  /* Button styles in dropdown */
+  .nav-links .nav-button {
+    margin: 1rem 0; /* Space buttons in dropdown */
+    width: 80%; /* Make buttons wider in dropdown */
+    align-self: center; /* Center buttons */
+    background-color: #555; /* Add background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 0.5rem; /* Button padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+  }
+  .nav-links-l .nav-button {
+    margin: 1rem 0; /* Space buttons in dropdown */
+    width: 80%; /* Make buttons wider in dropdown */
+    align-self: center; /* Center buttons */
+    background-color: #555; /* Add background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 0.5rem; /* Button padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+  }
+  /* Overlay for translucent background */
+.dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: 500; /* Below the navbar but above the content */
+}
+  
+}
+
