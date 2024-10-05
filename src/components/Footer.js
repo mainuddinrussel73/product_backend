@@ -2,10 +2,14 @@ import React from "react";
 import '../styles/Footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useAuth } from '../AuthContext';
 
 const Footer = () => {
+  const { currentUser } = useAuth();
   return (
-    <footer className="footer">
+    <>
+       {currentUser ? (
+      <footer className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="footer-section about">
@@ -67,6 +71,9 @@ const Footer = () => {
         <p>&copy; 2024 Book Shop | All Rights Reserved</p>
       </div>
     </footer>
+    ) : (<></>) }
+    </>
+   
   );
 };
 

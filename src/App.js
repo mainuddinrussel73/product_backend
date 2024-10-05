@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
+import UserProfile from './pages/UserProfile'; // Assuming UserProfile is in components folder
 
 import FAQ from './pages/FAQ';
 import BookDetails from './pages/BookDetails';
@@ -15,35 +16,14 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import NotFound from './pages/NotFound'; // 404 Page
-import ProtectedRoute from './components/ProtectedRoute';
-import { isAuthenticated } from './utils/auth';
+import ProtectedRoute from './ProtectedRoute';
+import { AuthProvider } from './AuthContext'; // Import AuthProvider
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [books, setBooks] = useState([]);
-  const url = "https://api.jsonbin.io/v3/b/66f17ec1ad19ca34f8ab53d0/latest";
-  const apiKey = "$2a$10$LLcAfF59gQLk0czNgZlJ..xPiPK3fuLRoPzGQTIbzZDnHcQ9h.V3G";
-  const [isAuthenticat, setIsAuthenticat] = useState(isAuthenticated());
-
-  const getData=()=>{
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "X-Master-Key": apiKey
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      setBooks(data.record);
-      console.log(data.record)
-    }
-      );
-  }
-  useEffect(() => {
-    getData();
-  }, []);
+  
   const blogs = [
     {
       id: 1,
@@ -123,13 +103,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Layout  isAuthenticat={isAuthenticat} setIsAuthenticat={setIsAuthenticat}>
+        <AuthProvider>
+          <Navbar/>
           <ToastContainer />
           <Routes>
               {/* Protect login and signup pages */}
-              <Route path="/login" element={!isAuthenticat ? <Login setIsAuthenticat={setIsAuthenticat}  /> : <Navigate to="/" />} />
-              <Route path="/signup" element={!isAuthenticat ? <Signup setIsAuthenticat={setIsAuthenticat}  /> : <Navigate to="/" />} />
-              <Route path="/forgot-password" element={!isAuthenticat ? <ForgotPassword /> : <Navigate to="/" />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup  />} />
+              <Route path="/forgot-password" element={<ForgotPassword /> } />
           
           
             {/* Protected routes */}
@@ -138,6 +119,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <UserProfile />
                 </ProtectedRoute>
               }
             />
@@ -169,7 +158,7 @@ function App() {
               path="/book/:bookId"
               element={
                 <ProtectedRoute>
-                  <BookDetails  books={books}/>
+                  <BookDetails />
                 </ProtectedRoute>
               }
             />
@@ -185,28 +174,15 @@ function App() {
             <Route path="*" element={<NotFound />} />
             
           </Routes>
-        </Layout>
+          <Footer/>
+        </AuthProvider>
      </Router>
      
     </div>
   );
 }
 
-function Layout({ children, setIsAuthenticat }) {
-  const location = useLocation();
 
-  // Define routes where navbar and footer should not be shown
-  const hideNavAndFooter = ['/login', '/signup', '/forgot-password'].includes(location.pathname);
-
-  return (
-    <>
-      {/* Conditionally show Navbar and Footer */}
-      {!hideNavAndFooter && <Navbar setIsAuthenticat={setIsAuthenticat}/>}
-      {children}
-      {!hideNavAndFooter && <Footer />}
-    </>
-  );
-}
 
 
 

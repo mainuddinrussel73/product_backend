@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import '../styles/BookDetails.css'; // Add styles for active class
 import { FaHeart, FaShoppingCart, FaDownload } from 'react-icons/fa'; // Import icons
 
-const BookDetails = ({ books }) => {
+const BookDetails = () => {
   const { bookId } = useParams();
   console.log(bookId);
-  const book = books.find(book => book.bookId === parseInt(bookId));
+  const [book, setBook] = useState([]);
+  const url = `https://product-details-8ym3.onrender.com/api/product/${bookId}`;
+
+  const getData=()=>{
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      setBook(data);
+      console.log(data)
+    }
+      );
+  }
+  useEffect(() => {
+    getData();
+  }, []);
+
   const [userReviews, setUserReviews] = useState([
     {
       userName: "John Doe",
@@ -56,7 +71,7 @@ const BookDetails = ({ books }) => {
    if (!book) {
     return <p>Book not found!</p>;
   }
-  if (books.length === 0) {
+  if (book.length === 0) {
     return <p>Loading book details...</p>;  // Prevent rendering if books are still loading
   }
   const handleWishlist = () => {

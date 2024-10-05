@@ -46,10 +46,16 @@
   bottom: 10px;
   left: 5px;
 }
+
+.book-card img:hover{
+  filter: blur(3px);
+}
 .book-card:hover .left-card .tag {
   display: inline-block;
   transition: opacity 0.3s ease;
   opacity: 1;
+  
+
 }
 .tag {
   display: none;  

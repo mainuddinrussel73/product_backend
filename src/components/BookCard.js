@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/BookCard.css';
 
-const BookCard = ({ book, imageUrl }) => {
-  console.log(book);
+const BookCard = ({ book }) => {
 
   return (
     

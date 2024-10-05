@@ -1,0 +1,317 @@
+/* Modern User Profile Styling */
+.user-profile-modern {
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #F6ECEB;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+ /* Profile Header */
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .profile-photo-container {
+    margin-bottom: 0px;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #F4E8E7;
+  }
+  
+  .profile-details {
+    text-align: left;
+    margin-left: 60px;
+  }
+  
+  .profile-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #A88986;
+    margin: 10px 0;
+  }
+  
+  .profile-email {
+    font-size: 18px;
+    color: #513431;
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile-btn {
+    background-color: #F4E8E7;
+    color: #7D4F4A;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #7D4F4A;
+    color: #F4E8E7;
+  }
+  /* User Information Section */
+  .user-info-container {
+
+    max-width: 100%;
+    background-color: #f9fafb; /* Light background color */
+    padding: 20px;
+    border-radius: 8px;
+    border: none; /* Soft border */
+    
+  }
+  
+  .user-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-info-header h3 {
+    font-size: 20px;
+    color: #A88986; /* Darker font color */
+  }
+  
+  .edit-btn {
+    background-color: transparent;
+    border: none;
+    color: #7D4F4A; /* Gray color */
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #F4E8E7;
+    transition: background-color 0.2s ease;
+  }
+  
+  .edit-btn:hover {
+    color: #F9F9F9;
+    background-color: #7D4F4A; /* Light gray on hover */
+  }
+  
+  .user-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    gap: 20px;
+  }
+  
+  .info-item strong {
+    display: block;
+    font-size: 14px;
+    color: #513431; /* Gray for labels */
+    margin-bottom: 4px;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+    color: #A88986; /* Darker text color */
+    margin: 0;
+  }
+  
+  
+
+  
+  /* Carousel Container */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-item {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .book-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Title and Author (initially hidden) */
+  .carousel-item h4,
+  .carousel-item p, 
+  .carousel-item button {
+    position: absolute;
+    left: 50%;
+    color: #A88986;
+    font-weight: bold;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Book Title */
+  .carousel-item h4 {
+    top: 40%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 600; /* Slightly bolder text */
+    white-space: normal; /* Allows text wrapping */
+    max-width: 90%;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    margin-top: 0px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #7D4F4A;
+    background-color: #F6ECEB; 
+  }
+  
+  /* Author Name */
+  .carousel-item p {
+    top: 60%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    color: #7D4F4A;
+    background-color: #F6ECEB; /* Dark transparent background */
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+  .carousel-item button{
+    top: 80%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    color: #f9fafb;
+    background-color: #7D4F4A; /* Dark transparent background */
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+  }
+  
+  /* Hover Effect */
+  .carousel-item:hover .book-cover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    filter: blur(3px);
+  }
+  
+  .carousel-item:hover h4,
+  .carousel-item:hover p, 
+  .carousel-item:hover button {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  
+  /* Carousel Navigation Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #7D4F4A;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  /* Hide scrollbars for carousel */
+  .carousel {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .user-profile-modern{
+        margin-top: 140px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .profile-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+      .profile-details {
+        text-align: center;
+        margin-left: 0px;
+      }
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+    
+      .profile-name {
+        font-size: 22px;
+      }
+    
+      .profile-email {
+        font-size: 16px;
+      }
+    
+      .edit-profile-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      .user-info-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+      }
+    
+      .edit-btn {
+        font-size: 12px; /* Smaller button text for mobile */
+      }
+  }
+  

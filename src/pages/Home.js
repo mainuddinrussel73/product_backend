@@ -7,20 +7,14 @@ import '../styles/Home.css';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
-  const url = "https://api.jsonbin.io/v3/b/66f17ec1ad19ca34f8ab53d0/latest";
-  const apiKey = "$2a$10$LLcAfF59gQLk0czNgZlJ..xPiPK3fuLRoPzGQTIbzZDnHcQ9h.V3G";
+  const url = "https://product-details-8ym3.onrender.com/api/products";
 
   const getData=()=>{
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "X-Master-Key": apiKey
-      }
-    })
+    fetch(url)
     .then(response => response.json())
     .then(data => {
-      setBooks(data.record);
-      console.log(data.record)
+      setBooks(data);
+      console.log(data)
     }
       );
   }
@@ -89,7 +83,7 @@ const Home = () => {
        
         <div className="book-card-grid" style={{ margin : "20px" }}>
           {currentBooks.map(book => (
-            <BookCard key={book.bookId} book={book} imageUrl={book.image} />
+            <BookCard key={book.bookId} book={book} />
           ))}
         </div>
       </section>
