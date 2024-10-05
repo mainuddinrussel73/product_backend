@@ -161,7 +161,8 @@ const Navbar = () => {
               <div className='nav-buttons'>
                 <div className='nav-button2'>
                 <div  className={'arrord-menu'}  >
-                      <a>View Profile</a>
+                      
+                      <Link style={{ textDecoration: "none" }} to={'/profile'}>View Profile</Link>
                       <a onClick={handleLogout}>Logout</a>
                   </div>
                 </div>
