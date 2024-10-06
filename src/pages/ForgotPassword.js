@@ -1,7 +1,6 @@
 // src/pages/ForgotPassword.js
 import React, { useState,useEffect } from 'react';
 import '../styles/Login.css'
-import weblogo from '../images/logo.png'
 import { useNavigate,Link } from 'react-router-dom';
 import { useAuth } from '../AuthContext'; // Import useAuth to access context
 import { auth } from '../Firebase'; // Import your auth from Firebase setup

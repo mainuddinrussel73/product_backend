@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css';
-import weblogo from '../images/logo.png'
 import { useAuth } from '../AuthContext'; // Import useAuth to access context
 import { FaGoogle,FaGithub } from 'react-icons/fa'; // Import Google icon
 

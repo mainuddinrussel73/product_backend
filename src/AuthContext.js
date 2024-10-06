@@ -98,15 +98,38 @@ export const AuthProvider = ({ children }) => {
     await signOut(auth);
     setCurrentUser(null); // Clear user from the context
   };
-
+  function getTimeLeft(timeout) {
+    return Math.ceil((timeout._idleStart + timeout._idleTimeout - Date.now()) / 1000);
+  }
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user);
-      setLoading(false); // Stop loading when user is known
-    });
-    return unsubscribe;
-  }, []);
+    const startSessionTimer = () => {
+      // Set a session timer for 30 minutes
+      const sessionTimeout = setTimeout(() => {
+        logout(); // Automatically log out after session expires
+        console.log(getTimeLeft(sessionTimeout))
+      }, 1 * 60 * 1000); // 30 minutes
 
+      return () => clearTimeout(sessionTimeout); // Clean up the timer
+    };
+
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+        startSessionTimer(); // Start the session timer only when user is authenticated
+      } else {
+        setCurrentUser(null);
+      }
+      setLoading(false);
+    });
+
+    // Clean up the session timeout and Firebase listener on unmount
+    return () => {
+      unsubscribe();
+      clearTimeout(startSessionTimer);
+    };
+  }, [logout]);
+
+  
   // Context value that can be accessed by any component
   const value = {
     currentUser,
