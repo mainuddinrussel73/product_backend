@@ -1,0 +1,187 @@
+/* General Container */
+.leaderboard-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+  }
+  
+  .leaderboard-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7D4F4A;
+    margin-bottom: 30px;
+  }
+  
+  /* Search and Sort Controls */
+  .leaderboard-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .leaderboard-search {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  .leaderboard-sort{
+    flex-direction: row;
+  }
+  .leaderboard-sort .sort-button {
+   
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .leaderboard-sort .sort-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Leaderboard */
+  .leaderboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .leaderboard-card {
+    background-color: #F6ECEB;
+    border-radius: 12px;
+    padding: 20px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .leaderboard-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Rank Section */
+  .leaderboard-rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-right: 15px;
+  }
+  
+  /* User Info Section */
+  .leaderboard-user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .leaderboard-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .leaderboard-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .leaderboard-books {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Score Section */
+  .leaderboard-score p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .leaderboard-score strong {
+    font-size: 1.3rem;
+    color: #007bff;
+  }
+  
+  /* Progress Bar */
+  .progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100px;
+  }
+  
+  .progress-bar {
+    height: 5px;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile-Responsive Styles */
+  @media (max-width: 768px) {
+    .leaderboard-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .leaderboard-user-info {
+      margin-top: 10px;
+    }
+    .leaderboard-controls {
+        display: block;
+    }
+    .leaderboard-sort{
+        display: inline-block;
+        flex-direction: row;
+        width: 100%;
+      }
+    .leaderboard-sort .sort-button {
+        
+     
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .leaderboard-sort .sort-button:hover {
+        background-color: #0056b3;
+      }
+  }
+  

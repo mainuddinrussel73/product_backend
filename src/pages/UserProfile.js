@@ -1,6 +1,17 @@
 import React,{ useEffect, useState } from 'react';
 import '../styles/UserProfile.css'; // Separate CSS file for styling
 import { useAuth } from '../AuthContext'; // Import useAuth to access context
+import BookUpload from "../components/BookUpload";
+import BookList from "../components/BookList";
+import BookStats from "../components/UserStatics";
+import EditBookModal from "../components/EditBookModal";
+import Leaderboard from "../components/LeaderBoard";
+import ExportButton from "../components/ExportButton";
+import BookRecommendations from "../components/BookRecommendations";
+import { AiFillDelete } from "react-icons/ai";
+import { MdEditSquare } from "react-icons/md";
+import { FaBookOpen } from "react-icons/fa";
+import { FaFileUpload } from "react-icons/fa";
 
 const UserProfile = () => {
 
@@ -152,6 +163,45 @@ const UserProfile = () => {
   
       }
   ];
+
+  const [books, setBooks] = useState(completedBooks);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen1, setIsModalOpen1] = useState(false);
+
+  const handleOpenModal1 = () => {
+    setIsModalOpen1(true);
+  };
+
+  const handleCloseModal1 = () => {
+    setIsModalOpen1(false);
+  };
+  const [editingBookIndex, setEditingBookIndex] = useState(null);
+  const [editingBook, setEditingBook] = useState(null);
+  const handleUploadBook = (book) => {
+    setBooks([...books, book]);
+  };
+
+  const handleEditBook = (index, updatedBook) => {
+    setEditingBookIndex(index);
+    setEditingBook(books[index]);
+    setIsModalOpen(true); // Open modal when edit is clicked
+  };
+
+  
+  const handleSaveEdit = (updatedBook) => {
+    const newBooks = [...books];
+    newBooks[editingBookIndex] = updatedBook;
+    setBooks(newBooks);
+    //setIsModalOpen(false); // Close modal after saving
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Close modal without saving
+  };
+  const handleDeleteBook = (index) => {
+    setBooks(books.filter((_, i) => i !== index));
+  };
+
   if (!currentUser) return <div>Loading...</div>;
 
   return (
@@ -242,7 +292,9 @@ const UserProfile = () => {
                 
                 <h4>{book.bookName}</h4>
                 <p>{book.author}</p>
-                <button> Open </button>
+                <div className='btn-grp' style={{ display : "flex" }}>
+                <button> <FaBookOpen/> </button>
+                </div>
                
               </div>
             ))}
@@ -252,6 +304,60 @@ const UserProfile = () => {
           <button className="carousel-btn next-btn" onClick={() => scrollCarousel('next')}>›</button>
         </div>
     </div>
+
+    
+    <div className="profile-content">
+        {/* Button to Open the Modal */}
+        {/* Floating Action Button to open the modal */}
+        <button className="floating-upload-btn" onClick={handleOpenModal1}>
+          <FaFileUpload/>
+        </button>
+        
+
+        {/* Upload Book Modal */}
+        {isModalOpen1 &&(
+            <BookUpload isOpen={isModalOpen1} onClose={handleCloseModal1} />
+
+        )}
+        <div className="completed-books-modern">
+        <h3 style={{ color : "#7D4F4A" }}>Uploaded Books</h3>
+
+        <div className="carousel-container">
+          <div className="carousel">
+            {books.map((book, index) => (
+              <div className="carousel-item"  key={index}>
+                <img src={book.image} alt={book.bookName} className="book-cover" />
+                <h4>{book.bookName}</h4>
+                <p>{book.author}</p>
+                <div className='btn-grp' style={{ display : "flex" }}>
+                  <button onClick={() => handleEditBook(index, book)}><MdEditSquare /> </button>
+                  <button onClick={() => handleDeleteBook(index)}><AiFillDelete /> </button>
+                </div>
+                
+              </div>
+            ))}
+           
+          </div>
+          {/* Navigation buttons */}
+          <button className="carousel-btn prev-btn" onClick={() => scrollCarousel('prev')}>‹</button>
+          <button className="carousel-btn next-btn" onClick={() => scrollCarousel('next')}>›</button>
+        </div>
+        {isModalOpen && (
+        <EditBookModal
+          isOpen={true}
+          book={editingBook}
+          onSave={handleSaveEdit}
+          onClose={handleCloseModal}
+        />
+      )}
+    </div>
+        <BookStats  />
+        <Leaderboard users={[currentUser]} />
+        <ExportButton books={books} />
+        <BookRecommendations books={books} />
+    </div>
+    
+    
     
   </div>
   );

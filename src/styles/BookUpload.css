@@ -1,0 +1,145 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 80vh; /* Set a maximum height for the modal */
+    display: flex;
+    flex-direction: column;
+    animation: fadeInModal 0.5s ease-in-out;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.upload-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group-modern label {
+  font-size: 1rem;
+  color: #666;
+}
+
+.input-group-modern input,
+.input-group-modern textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-group-modern input:focus,
+.input-group-modern textarea:focus {
+  border: 1px solid #7D4F4A;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.floating-upload-btn {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #7D4F4A;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-upload-btn:hover {
+  background-color: #a0665d;
+}
+
+.submit-button {
+  padding: 12px 24px;
+  background-color: #7D4F4A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #a0665d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+  }
+}

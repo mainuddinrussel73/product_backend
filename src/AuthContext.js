@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }) => {
       const sessionTimeout = setTimeout(() => {
         logout(); // Automatically log out after session expires
         console.log(getTimeLeft(sessionTimeout))
-      }, 1 * 60 * 1000); // 30 minutes
+      }, 10 * 60 * 1000); // 30 minutes
 
       return () => clearTimeout(sessionTimeout); // Clean up the timer
     };
