@@ -5,6 +5,7 @@ import { HashRouter as Router, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Books from './pages/Books';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
@@ -119,6 +120,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/books"
+              element={
+                <ProtectedRoute>
+                  <Books />
                 </ProtectedRoute>
               }
             />

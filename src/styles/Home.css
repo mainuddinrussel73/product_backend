@@ -1,5 +1,11 @@
 .book-section-div{
+  margin-top: 80px;
+  
 
+}
+.book-section-title{
+  color: #7D4F4A;
+  font-weight: bold;
 }
 /* Main Container for Items Per Page */
 .items-per-page {
@@ -76,5 +82,9 @@
     justify-content: center; /* Center items horizontally */
     gap: 10px; /* Space between label and select */
   }
+  .book-section-div{
+    margin-top: 130px;
+    
   
+  }
 }

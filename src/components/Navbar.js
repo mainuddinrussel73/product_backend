@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Navbar.css';
 import { FaShoppingCart, FaHeart, FaUserCircle } from 'react-icons/fa';
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { PiBooksBold as ImBooks } from "react-icons/pi";
 
 import { FaBars, FaTimes, FaArrowDown } from "react-icons/fa";
 import { FiHome, FiInfo, FiBookOpen, FiHelpCircle } from 'react-icons/fi'; // Icons for links
@@ -163,6 +164,8 @@ const Navbar = () => {
                 <div  className={'arrord-menu'}  >
                       
                       <Link style={{ textDecoration: "none" }} to={'/profile'}>View Profile</Link>
+                      <Link style={{ textDecoration: "none" }}  to={'/about'} > About </Link>
+
                       <a onClick={handleLogout}>Logout</a>
                   </div>
                 </div>
@@ -185,17 +188,18 @@ const Navbar = () => {
                 
                 </Link>
               </li>
-            <li>
-              <Link  className='nav-item' to="/about" onClick={closeDropdown}>
+              <li>
+              <Link  className='nav-item' to="/books" onClick={closeDropdown}>
             
                   <div>
-                  <FiInfo className="nav-icon" /> 
+                  <ImBooks className="nav-icon" /> 
                   </div>
                   <div>
-                    <p>About</p>
+                    <p>Books</p>
                   </div>
               </Link>
             </li>
+            
             <li>
               <Link  className='nav-item' to="/blog" onClick={closeDropdown}>
               
@@ -311,7 +315,8 @@ const Navbar = () => {
                       borderColor : '#cabdbd'
                   }}></div>
                   <Link style={{ textDecoration: "none" }} to={'/profile'}>View Profile</Link>
-
+                  <Link style={{ textDecoration: "none" }}  to={'/about'} > About </Link>
+            
                   <a onClick={handleLogout}>Logout</a>
                 </div>
               

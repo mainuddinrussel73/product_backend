@@ -1,0 +1,137 @@
+.carousels-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  max-width: 100%;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #F5F2F1;
+  border-radius: 10px;
+  }
+  
+  .carousels-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #bfa09e;
+  }
+  
+  .slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: auto;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ebf4f3;
+
+
+  }
+  
+  .slider-wrapper {
+    display: flex;
+
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    position: relative; /* Important for the overlay effect */
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide img {
+    width: fit-content;
+    height: fit-content;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .slide-content {
+    position: absolute; /* Position the content over the image */
+    bottom: 0; /* Align content to the bottom of the image */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #FAF3E5;
+    color: #0F0E0B;
+    border-bottom-left-radius: 8px; /* Match image's rounded corners */
+    border-bottom-right-radius: 8px;
+  }
+  
+  .slide-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .slide-content p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #7D4F4A;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: -4px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+    background-color: #fff;
+    color: #7D4F4A
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+  
+  .dot:hover {
+    background-color: #555;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+  }
+  

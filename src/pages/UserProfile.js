@@ -353,7 +353,6 @@ const UserProfile = () => {
     </div>
         <BookStats  />
         <Leaderboard users={[currentUser]} />
-        <ExportButton books={books} />
         <BookRecommendations books={books} />
     </div>
     
